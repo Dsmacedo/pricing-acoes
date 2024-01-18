@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock price Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js')}}"></script>
+</head>
+<body>
+    <h1>Painel Olho Investidor</h1>
+    <p>Criptomoeda Ex: BTC-USD / ETH-USD / LTC-USD entre outras</p>
+    <p>Acões Ex: AAPL / META / MSFT entre outras</p>
+    <form id="add-ticker-form">
+        <input class="input-ticker input-estilizado" type="text" id="new-ticker" placeholder="add Ticker" required>
+        <button class="buton-color" type="submit">Adicionar</button>
+    </form>
+        <p id="timer">Atualiza em <span id="counter"></span>seg</p>
+        <div id="tickers-grid"></div>
+</body>
+</html>
